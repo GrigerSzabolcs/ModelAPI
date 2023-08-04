@@ -1,4 +1,5 @@
 azure-storage-blob
+tensorflow==2.10.0
 Flask==2.3.2
 keras==2.10.0
 Keras_Preprocessing==1.1.2
