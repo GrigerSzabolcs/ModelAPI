@@ -1,4 +1,4 @@
-azure_storage==0.37.0
+azure-storage-blob
 Flask==2.3.2
 keras==2.10.0
 Keras_Preprocessing==1.1.2
