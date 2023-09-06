@@ -52,7 +52,7 @@ def predict():
     #        answers.append("neutral")
     #    else:
     #        answers.append("positive")
-    answers = "bertendpoint"
+    answers = "bertendpointt"
     return jsonify(answers)
 """
 blob_service_client = BlobServiceClient.from_connection_string(connection_string)
