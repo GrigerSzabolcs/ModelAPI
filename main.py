@@ -23,7 +23,7 @@ with open(file_name, "wb") as download_file:
     download_file.write(blob_client.download_blob().readall())
 
 
-print("Blob accessedd")
+print("Blob accessed")
 bert_tokenizer = BertTokenizer.from_pretrained("bert-base-uncased")
 model = keras.models.load_model("MODEL.h5", custom_objects={"TFBertModel": TFBertModel})
 
