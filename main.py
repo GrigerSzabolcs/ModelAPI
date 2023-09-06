@@ -16,16 +16,16 @@ blob_name = "BERT_model.h5"
 file_name = "MODEL.h5"
 
 
-#blob_service_client = BlobServiceClient.from_connection_string(connection_string)
-#blob_client = blob_service_client.get_blob_client(container_name, blob_name)
+blob_service_client = BlobServiceClient.from_connection_string(connection_string)
+blob_client = blob_service_client.get_blob_client(container_name, blob_name)
 
-#with open(file_name, "wb") as download_file:
-#    download_file.write(blob_client.download_blob().readall())
+with open(file_name, "wb") as download_file:
+    download_file.write(blob_client.download_blob().readall())
 
 
-#print("Blob accessed")
-#bert_tokenizer = BertTokenizer.from_pretrained("bert-base-uncased")
-#model = keras.models.load_model("MODEL.h5", custom_objects={"TFBertModel": TFBertModel})
+print("Blob accessed")
+bert_tokenizer = BertTokenizer.from_pretrained("bert-base-uncased")
+model = keras.models.load_model("MODEL.h5", custom_objects={"TFBertModel": TFBertModel})
 
 @app.route('/api',methods=['POST'])
 def predict():
@@ -52,7 +52,7 @@ def predict():
     #        answers.append("neutral")
     #    else:
     #        answers.append("positive")
-    answers = "bertendpointt"
+    answers = "bertendpoint"
     return jsonify(answers)
 """
 blob_service_client = BlobServiceClient.from_connection_string(connection_string)
